@@ -34,20 +34,4 @@
   font-family: 'Open Sans', sans-serif;
 }
 
-/* .cat-info img {
-  width: 300px;
-} */
 
-.cat-info .text-wrapper {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-}
-
-.cat-info h1 {
-  font-weight: bold;
-}
-
-.cat-info p {
-  margin-top: 5px;
-}
