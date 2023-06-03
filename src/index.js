@@ -4,14 +4,14 @@ import { Notify } from 'notiflix/build/notiflix-notify-aio';
 
 const selectEl = document.querySelector('.breed-select');
 const loaderEl = document.querySelector('.loader');
-// const errorEl = document.querySelector('.error');
+const errorEl = document.querySelector('.error');
 const catInfoEl = document.querySelector('.cat-info');
 
 
 selectEl.addEventListener('change', createMarkup);
 
 selectEl.classList.add('is-hidden');
-// errorEl.classList.add('is-hidden');
+errorEl.classList.add('is-hidden');
 
 fetchBreeds()
   .then(data => {
@@ -33,7 +33,7 @@ function createMarkup(evt){
     loaderEl.classList.remove('is-hidden');
     fetchCatByBreed(evt.target.value)
     .then(createCardCat)
-    .catch(() => error.classList.remove('is-hidden'))
+    .catch(() => errorEl.classList.remove('is-hidden'))
     .finally(() => loaderEl.classList.add('is-hidden'));
 }
 
@@ -45,6 +45,6 @@ function createCardCat(cat){
 }
 
 function showError(message) {
-    Notify.Report.Failure('Error', message, 'Reload', () => location.reload());
+    Notify.failure(`Oops! Something went wrong! Try reloading the page!`);
   }
   

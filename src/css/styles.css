@@ -4,7 +4,7 @@
   display: none;
 }
 
-.loader {
+/* .loader {
   width: 48px;
   height: 48px;
   background: #6ad6f7;
@@ -24,7 +24,32 @@
     transform: rotate(360deg) scale(0.2);
     border-radius: 10%;
   }
-}
+} */
+
+
+
+/* 2 variant ------------------------
+
+.loader {
+    font-size: 60px;
+    display: inline-block;
+    letter-spacing: 2px;
+    font-family: 'Open Sans', sans-serif;
+    color: #FFF;
+    box-sizing: border-box;
+    animation: animloader 1s ease-in infinite alternate;
+  }
+  
+  @keyframes animloader {
+    0% {
+      filter: blur(0px);
+      transform: skew(0deg);
+    }
+    100% {
+      filter: blur(3px);
+      transform: skew(-4deg);
+    }
+  } */
 
 .cat-info {
   display: flex;
